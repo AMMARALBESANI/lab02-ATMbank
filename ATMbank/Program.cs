@@ -8,9 +8,10 @@ namespace ATMbank
         static public string process = "";
         static void Main(string[] args)
         {
-            
+    
                 usrInterface();
-            
+           
+           
         }
 
         static void usrInterface()
@@ -30,9 +31,11 @@ namespace ATMbank
                 {
                     Console.WriteLine("Enter the amount you want to withdraw:");
                      decimal amountW = Convert.ToDecimal(Console.ReadLine());
-                     Withdraw(amountW);
-                    process += $"you withdraw {amountW} to your Balance \n\n";
-                    Console.WriteLine(ViewBalance());
+                    if(Withdraw(amountW) == Balance) {
+                        process += $"you withdraw {amountW} from your Balance \n\n";
+                        Console.WriteLine(ViewBalance());
+
+                    }
 
                 }
                 if (number == 3)
@@ -40,9 +43,11 @@ namespace ATMbank
 
                     Console.WriteLine("Enter the amount you want to deposit:");
                      decimal amountD = Convert.ToDecimal(Console.ReadLine());
-                     Deposit(amountD);
-                    process += $"you deposit {amountD} form your Balance \n\n";
-                    Console.WriteLine(ViewBalance());
+                    if(Deposit(amountD) == Balance) {
+                        process += $"you deposit {amountD} to your Balance \n\n";
+                        Console.WriteLine(ViewBalance());
+                    }
+                    
 
 
                 }
