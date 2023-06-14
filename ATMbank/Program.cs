@@ -22,7 +22,7 @@ namespace ATMbank
 
         static void usrInterface()
         {
-            Console.WriteLine("Welcome amigo");
+            Console.WriteLine("Welcome our costumer");
             
             bool situation = true;
             while (situation)
