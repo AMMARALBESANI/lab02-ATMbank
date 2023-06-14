@@ -21,7 +21,7 @@ namespace ATMbank
             bool situation = true;
             while (situation)
             {
-                Console.WriteLine("Select the transaction number: 1-View Balance 2-Withdraw 3-Deposit 4-Exit");
+                Console.WriteLine("Select the transaction number: 1-View Balance 2-Withdraw 3-Deposit 4-Exit!");
                 int number = Convert.ToInt32(Console.ReadLine());
                 if (number == 1)
                 {
